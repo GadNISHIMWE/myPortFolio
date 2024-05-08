@@ -124,5 +124,8 @@ width: 50%;
     font-size: 14px;
 }
 .tab-contents{
-    display: ;
+    /* display: none; */
+}
+.tab-contents.active-tab{
+    display: block;
 }
