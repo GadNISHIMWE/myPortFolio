@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Port-Folio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8a3e3c378a.js" crossorigin="anonymous"></script>
 </head>
 <body>
  <div id="header">
@@ -30,11 +31,10 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="gadimg.jpeg" alt="">
+                <img src="image.jpeg" alt="">
             </div>
             <div class="about-col-2">
-               <h1 class="sub-title"
-               >About Me</h1>
+               <h1 class="sub-title" >About Me</h1>
                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur cum 
                 expedita dolor. Vel dolorum delectus numquam officia veniam illo qui 
                 cupiditate optio odio? Perferendis rerum nemo laborum, commodi, deserunt 
@@ -42,7 +42,7 @@
                 explicabo quis excepturi magni cum aliquid totam sint? Reiciendis, deleniti esse!</p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
@@ -72,5 +72,58 @@
         </div>
     </div>
  </div>
+ <!---------------------------------services---------------------      -->
+ <div id="services">
+    <div class="container">
+        <h1 class="sub-title" >My Servises</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i> <h2>web design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>
+                    elit.Beatae hic esse illum ea. Perferendis, a!</p>
+                    <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i> <h2>UI/UX design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>
+                     elit. Beatae hic esse illum ea. Perferendis, a!</p>
+                    <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i> <h2>App design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>
+                     elit. Beatae hic esse illum ea. Perferendis, a!</p>
+                    <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+ </div>
+ <fieldset id="lunch">
+    <legend>Gad</legend>
+    <div class="input-container"></div>
+  </fieldset>
+ <script src="index.js">
+   
+// function opentab(tabname) {
+//         var tablinks = document.querySelectorAll(".tab-links");
+//         var tabcontents = document.querySelectorAll(".tab-contents");
+
+//         // Remove 'active-link' class from all tab links
+//         tablinks.forEach(function(tablink) {
+//             tablink.classList.remove("active-link");
+//         });
+
+//         // Remove 'active-tab' class from all tab contents
+//         tabcontents.forEach(function(tabcontent) {
+//             tabcontent.classList.remove("active-tab");
+//         });
+
+//         // Add 'active-link' class to the clicked tab link
+//         document.querySelector(".tab-links." + tabname).classList.add("active-link");
+
+//         // Add 'active-tab' class to the corresponding tab content
+//         document.getElementById(tabname).classList.add("active-tab");
+//     }
+ </script>
 </body>
 </html>
