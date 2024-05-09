@@ -167,3 +167,17 @@ width: 50%;
     background: #ff004f;
     transform: translateY(-10px);
 }
+
+
+
+
+
+
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
