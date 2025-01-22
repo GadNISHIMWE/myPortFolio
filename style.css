@@ -44,7 +44,7 @@ nav ul li a::after{
     content:  '';
     width: 0;
     height: 3px;
-    background: #a7cfc3;
+    background: #ff004f;
     position:absolute;
     left: 0;
     bottom: -6px;
@@ -249,20 +249,32 @@ width: 50%;
     opacity: 0.7;
 }
 
-/* .contact-left{
-    flex-basis: 35%;    
-    }
-    .contact-right{
-        flex-basis: 60%;    
-        } */
+/*--------------------- contact------------ */
         .contact-left p{
             margin-top: 30px;    
             }     
 .contact-left p i{
-    color:#ff004f ;
+    color:#ff004f;
     margin-right: 15px;
     font-size: 25px;
 }
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 5px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform:translateY(-5px) ;
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+
 
 
 
@@ -272,4 +284,4 @@ footer{
     align-items: center;
 }
 
-/*--------------------- contact------------ */
+
