@@ -4,6 +4,9 @@
     font-family:'poppins',sans-serif;
     box-sizing: border-box ;
 }
+html{
+    scroll-behavior:smooth;
+}
 body{
     background: rgb(17, 17, 17);
     color: white;
@@ -342,6 +345,8 @@ nav .fa-solid{
         width: 200px;
         height: 100vh;
         padding:50px ;
+        z-index: 2;
+        transition: right 0.5s;
     }
     nav ul li{
         display: block;
