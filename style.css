@@ -312,6 +312,10 @@ form btn2{
 
 
 /* -------------- Css for small screens---------- */
+nav .fa-solid{
+    display: none;
+}
+
 @media only screen and (max-width:600px){
     #header{
         background-image: url(backgroundimage.jpeg);
@@ -324,6 +328,31 @@ form btn2{
     }
     .header-text h2{
         font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding:50px ;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
     }
 }
 
