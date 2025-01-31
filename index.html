@@ -12,7 +12,7 @@
     <div class="container">
         <nav>
             <img src="logo1.png" class="logo" alt="">
-           
+            <!-- <button id="theme-toggle" class="theme-toggle">Toggle Dark/Light Mode</button> -->
             <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -21,7 +21,7 @@
                 <li><a href="#contact">Contact</a></li>
                 <i class="fa-solid fa-circle-xmark"onclick="closemenu()"></i>
             </ul>
-             <button id="theme-toggle" class="theme-toggle">Toggle Dark/Light Mode</button>
+            
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
@@ -251,10 +251,6 @@
 //         document.getElementById(tabname).classList.add("active-tab");
 //     }
  </script>
- <form name="submit-to-google-sheet">
-    <input name="email" type="email" placeholder="Email" required>
-    <button type="submit">Send</button>
-  </form>
   
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzS_bGCNPceJeAP6yBa9t0gtxJ7l6wtMuO2Rv5mJDDQQXDVFztLfPIt22XUSmq1_Knw/exec'
@@ -262,7 +258,7 @@
   
     form.addEventListener('submit', e => {
       e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      fetch(scriptURL, { method: 'get', body: new FormData(form)})
         .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message))
     })

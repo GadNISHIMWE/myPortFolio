@@ -29,8 +29,8 @@ body {
   /* Style for the toggle button */
   .theme-toggle {
     position: fixed;
-    top: 1rem;
-    right: 1rem;
+    top: 0.5rem;
+    left: 20rem; 
     padding: 0.5rem 1rem;
     font-size: 1rem;
     border: none;
@@ -57,7 +57,9 @@ body {
     padding:10px 10%;
 }
 nav{
-
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
