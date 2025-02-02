@@ -65,7 +65,7 @@ nav{
     align-items: center;
     flex-wrap: wrap;
     position: fixed;
-    background: #000000;
+    /* background: #000000; */
 
 }
 .logo{
@@ -78,7 +78,7 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li a{
-    color: #fff;
+    /* color: #fff; */
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -112,7 +112,7 @@ color:#ff004f
 /* ----------------about---------*/
 #about{
     padding: 80px 0;
-    color: #ababab;
+    /* color: #ababab; */
 }
 .row{
     display: flex;
@@ -132,7 +132,7 @@ color:#ff004f
 .sub-title{
 font-size: 60px;
 font-weight: 600;
-color: #fff;
+/* color: #fff; */
 }
 .tab-titles{
     display: flex;
@@ -183,7 +183,7 @@ width: 50%;
     margin-top: 50px;
 }
 .services-list div{
-    background: #262626;
+    /* background: #262626; */
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -201,7 +201,7 @@ width: 50%;
 }
 .services-list div a{
     text-decoration: none;
-    color: #fff;
+    /* color: #fff; */
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
@@ -210,6 +210,7 @@ width: 50%;
     background:#ff004f;
     opacity: 0.7;
     transform: translateY(-10px);
+    
 }
 
 /* ------------------------------portfolio--------------------- */
@@ -285,7 +286,7 @@ width: 50%;
      padding: 14px 50px;
      border-radius: 6px;
      text-decoration: none;
-     color: #fff;
+     /* color: #fff; */
 }
 .btn:hover{
     background: #ff004f;
@@ -327,10 +328,10 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    /* background: #262626; */
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    /* color: #fff; */
     font-size: 13px;
     border-radius: 6px;
 }
@@ -343,7 +344,7 @@ form btn2{
     width: 100%;
     text-align: center; 
     padding:25px 0;
-    background: #262626;
+    /* background: #262626; */
     font-weight: 300;
     margin-top: 20px;
 }
