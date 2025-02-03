@@ -19,13 +19,17 @@ body {
     font-family: Arial, sans-serif;
     transition: background-color 0.3s, color 0.3s;
   }
+
   
   /* Dark mode styles */
   body.dark-mode {
     background-color: #121212;
     color: #ffffff;
   }
-  
+  #header.dark-mode{
+    background-color: #121212;
+    color: #ffffff;
+  }
   /* Style for the toggle button */
   .theme-toggle {
     position: fixed;
@@ -51,6 +55,7 @@ body {
     background-image: url(background.png);
     background-size:cover;
     background-position:center;
+    
     
 } 
 .container{
