@@ -70,7 +70,8 @@ nav{
     align-items: center;
     flex-wrap: wrap;
     position: fixed;
-    /* background: #000000; */
+    background: #333;
+    z-index: 1000;
 
 }
 .logo{
@@ -83,7 +84,7 @@ nav ul li{
     margin: 10px 30px;
 }
 nav ul li a{
-     color: #190a3c;
+     color: #c63c60;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -393,6 +394,7 @@ width: 50%;
 .social-icons a {
     text-decoration: none;
     font-size: 20px;
+    margin-top: 20px;
     margin-right: 8px;
     color: #ababab;
     display: inline-block;
@@ -446,7 +448,7 @@ nav .fa-solid{
 
 @media only screen and (max-width:600px){
     #header{
-        background-image: url(backgroundimage.jpeg);
+        background-image: url(backgroundimage.png);
     }
     .header-text{
         margin-top: 90%;
