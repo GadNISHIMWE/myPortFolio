@@ -1,7 +1,7 @@
 var sidemenu = document.getElementById("sidemenu");
 function openmenu(){
     sidemenu.style.right ="0";
-    sidemenu.style.right ="-200px";
+    
 }
 function closemenu(){
     sidemenu.style.right ="-200px";
