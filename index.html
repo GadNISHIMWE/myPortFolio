@@ -34,8 +34,11 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>UI/UX Designer</p>
-            <h2>Hello, I'm <span>Gad</span><br>NISHIMWE from Kigali</h2>
+            <p><h2>/UX Designer</h2></p>
+            <h6 class="greeting" id="greeting-message">
+                <!-- The dynamic greeting will appear here -->
+            </h3>
+            <h2>I'm <span>Gad</span><br>NISHIMWE from Kigali</h2>
         </div>
     </div>
  </div>   
@@ -278,6 +281,40 @@
         .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message))
     })
+  </script>
+
+               <!---------------------- greetings ------------------>
+               <script>
+    const now = new Date();
+    const hours = now.getHours();
+    let greeting;
+
+    if (hours < 12) {
+      greeting = "Good morning, thank you for viewing our portfolio.";
+    } else if (hours < 18) {
+      greeting = "Good afternoon, thank you for viewing our portfolio.";
+    } else {
+      greeting = "Good evening, thank you for viewing our portfolio.";
+    }
+
+    const container = document.getElementById("greeting-message");
+
+    // Split the greeting into words
+    const words = greeting.split(" ");
+
+    words.forEach((word, index) => {
+      const span = document.createElement("span");
+      span.textContent = word;
+
+      // Apply animation delay to each word
+      span.style.animationDelay = `${index * 0.5}s`; // Each word starts after the previous
+      container.appendChild(span);
+
+      // Add a space between words
+      if (index < words.length - 1) {
+        container.appendChild(document.createTextNode(" "));
+      }
+    });
   </script>
 </body>
 </html>
