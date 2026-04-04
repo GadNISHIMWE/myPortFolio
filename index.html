@@ -1,320 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Port-Folio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Gad Portfolio</title>
 
-    <script src="https://kit.fontawesome.com/8a3e3c378a.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
- <div id="header">
-    <div class="container">
-        <nav>
-            <img src="logo1.png" class="logo" alt="">
-            <!-- <button id="theme-toggle" class="theme-toggle">Toggle Dark/Light Mode</button> -->
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><label for="theme-toggle" class="switch">
-                    <input type="checkbox" id="theme-toggle">
-                    <span id="icon" class="slider round">
-                        <span class="sun">☀️</span>
-                        <span class="moon">🌙</span>
-                    </span>
-                </label></li>
-                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
-            </ul>
-            
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-            <p><h2>/UX Designer</h2></p>
-            <h6 class="greeting" id="greeting-message">
-                <!-- The dynamic greeting will appear here -->
-            </h3>
-            <h2>I'm <span>Gad</span><br>NISHIMWE from Kigali</h2>
-        </div>
+
+<!-- THEME TOGGLE -->
+<div class="theme-toggle" id="themeToggle">
+  <i class="fas fa-moon"></i>
+</div>
+
+<!-- RIGHT NAV -->
+<div class="right-nav">
+  <a href="#home" class="nav-btn active"><i class="fas fa-home"></i></a>
+  <a href="#about" class="nav-btn"><i class="fas fa-user"></i></a>
+  <a href="#skills" class="nav-btn"><i class="fas fa-lightbulb"></i></a>
+  <a href="#projects" class="nav-btn"><i class="fas fa-briefcase"></i></a>
+  <a href="#experience" class="nav-btn"><i class="fas fa-calendar"></i></a>
+  <a href="#contact" class="nav-btn"><i class="fas fa-envelope"></i></a>
+</div>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-container">
+
+    <div class="hero-image">
+      <img src="image1.jpeg">
     </div>
- </div>   
-<!----------------about------------ --->
- <div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="image.png" alt="">
-            </div>
-            <div class="about-col-2">
-               <h1 class="sub-title" >About Me</h1>
-               <p>I am passionate about developing web projects and mobile applications.
-                 As a student of Computer and Software Engineering at the University of Rwanda,
-                  I enjoy combining creativity with technology. With a solid foundation in software engineering,
-                   I create user-friendly and engaging interfaces and mobile applications that seamlessly combine design and functionality.
-                    Driven by curiosity and a desire to create a positive impact,
-                     I continuously seek opportunities to innovate and challenge conventional norms.</p>
 
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                        <li><span>Web Develoment</span><br>Web App Development</li>
-                        <li><span>App development</span><br>Building Android/ios apps</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>2024 - current</span><br>Still working on both front-end and back-end projects</li>
-                        <li><span>2023 - 2024</span><br>UI/UX Design front end projects in university of Rwanda'courses</li>
-                        <li><span>2021-2022</span><br>Internship.</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2016</span><br>UI/UX Design Training at University of Rwanda</li>
-                        <li><span>2016</span><br>MBA from MIT</li>
-                        <li><span>2014</span><br>BBA from ISM</li>
-                    </ul>
-                </div>
-            </div>
+    <div class="hero-content">
+      <span class="line"></span>
+      <h1><span class="highlight">I'M GAD NISHIMWE.</span><br>WEB DEVELOPER</h1>
+      <p>I build modern, responsive, and user-friendly websites.</p>
 
-        </div>
+      <div class="hero-buttons">
+        <a href="#about" class="btn-main">
+          MORE ABOUT ME <span class="circle">➜</span>
+        </a>
+        <a href="#projects" class="btn-secondary">View Projects</a>
+      </div>
     </div>
- </div>
- <!---------------------------------services---------------------      -->
- <div id="services">
-    <div class="container">
-        <h1 class="sub-title" >My Servises</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i> <h2>web design</h2>
-                <p>Web design focuses on creating visually appealing, user-friendly,
-                  and responsive interfaces to ensure an optimal user experience across devices<br>
-                     while maintaining functionality and accessibility.</p>
-                    <a href="#">learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-crop-simple"></i> <h2>UI/UX design</h2>
-                <p>UI/UX design involves crafting intuitive user interfaces and 
-                    seamless user experiences by focusing on usability, accessibility,
-                     and aesthetic appeal to enhance user satisfaction and engagement.</p>
-                    <a href="#">learn more</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-app-store"></i> <h2>App design</h2>
-                <p>App design focuses on creating visually appealing, <br>
-                     user-friendly interfaces and seamless navigation to ensure an engaging and
-                      efficient user experience across mobile and web applications.</p>
-                    <a href="#">learn more </a>
-            </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+  
+  <h1 class="background-title">RESUME</h1>
+  <h2 class="main-title">ABOUT <span>ME</span></h2>
+
+  <div class="container">
+
+    <!-- Left Side -->
+    <div class="left">
+      <h3>PERSONAL INFOS</h3>
+
+      <div class="info-grid">
+        <div>
+          <p><span>First Name :</span> Steve</p>
+          <p><span>Last Name :</span> Milner</p>
+          <p><span>Age :</span> 27 Years</p>
+          <p><span>Nationality :</span> Tunisian</p>
+          <p><span>Freelance :</span> Available</p>
         </div>
+
+        <div>
+          <p><span>Address :</span> Tunis</p>
+          <p><span>Phone :</span> +21621184010</p>
+          <p><span>Email :</span> you@mail.com</p>
+          <p><span>Skype :</span> steve.milner</p>
+          <p><span>Languages :</span> French, English</p>
+        </div>
+      </div>
+
+      <button class="cv-btn">
+        DOWNLOAD CV
+        <span class="icon">⬇</span>
+      </button>
     </div>
- </div>
- 
- <!------------------- portfolio ---------------------->
- <div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title" >My Work</h1>
-        <div class="work-list">
 
-            <div class="work">
-                <img src="work-image1.png" alt="">
-            <div class="layer">
-                <h3>Online Shopping Website</h3>
-                <p>An intuitive online shopping platform offering a seamless user experience
-                     with features like product browsing, secure payments, and order tracking,
-                      designed to connect customers with a wide range of quality products.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            </div>
+    <!-- Right Side Stats -->
+    <div class="right">
+      <div class="card">
+        <h2>12+</h2>
+        <p>YEARS OF EXPERIENCE</p>
+      </div>
 
-            <div class="work">
-                <img src="work-image2.png" alt="">
-            <div class="layer">
-                <h3>Chat App</h3>
-                <p>A user-friendly Chat App enabling real-time communication through text, voice,
-                     and multimedia sharing, designed to provide secure, efficient, 
-                     and engaging interactions across various platforms.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            </div>
+      <div class="card">
+        <h2>97+</h2>
+        <p>COMPLETED PROJECTS</p>
+      </div>
 
-            <div class="work">
-                <img src="work-image3.png" alt="">
-            <div class="layer">
-                <h3>Music App</h3>
-                <p>A dynamic music app providing users with a personalized experience to discover,
-                     stream, and create playlists of their favorite songs, 
-                     enhanced with seamless navigation and rich audio quality.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            </div>
+      <div class="card">
+        <h2>81+</h2>
+        <p>HAPPY CUSTOMERS</p>
+      </div>
 
-        </div>
-         <a href="#" class="btn">See more</a>
-    </div> 
- </div>
-
- <!--------------------- contact  ----------------->
-  <div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-envelope"></i>gadnishimwe67@gmail.com </p>
-                <p><i class="fa-solid fa-phone"></i>0790456904</p>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/gad_nishimwe1/"><i class="fa-brands fa-square-instagram"></i>Instagram</a>
-                    <a href="https://x.com/gad_nishimwe1"><i class="fa-brands fa-square-x-twitter"></i></i>X</a>
-                    <a href="www.linkedin.com/in/gad-nishimwe-462ab6305"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
-        
-                </div>
-                <a href="cv.pdf" download class="btn btn2">Download CV</a>
-                
-            </div>
-            <div class="contact-right">
-                 <form action="">
-                    <input type="text" name="Name" placeholder="your Name" required>
-                    <input type="text" name="email" placeholder="your Email" required>
-                    <textarea name="Message" rows="6" id="" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                 </form>
-            </div>
-        </div>
-
-
-
-        </div>
+      <div class="card">
+        <h2>53+</h2>
+        <p>AWARDS WON</p>
+      </div>
     </div>
-    <div class="copyright">
-        <P>All rights reserved &copy;Gad NISHIMWE</P>
+
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+<section class="skills-section">
+
+  <h1 class="background-title">SKILLS</h1>
+  <h2 class="main-title">MY <span>SKILLS</span></h2>
+
+  <div class="skills-container">
+
+    <div class="skill">
+      <div class="circle" data-percent="90">
+        <span>90%</span>
+      </div>
+      <h3>HTML</h3>
+    </div>
+
+    <div class="skill">
+      <div class="circle" data-percent="85">
+        <span>85%</span>
+      </div>
+      <h3>CSS</h3>
+    </div>
+
+    <div class="skill">
+      <div class="circle" data-percent="75">
+        <span>75%</span>
+      </div>
+      <h3>JavaScript</h3>
+    </div>
+
+    <div class="skill">
+      <div class="circle" data-percent="70">
+        <span>70%</span>
+      </div>
+      <h3>React</h3>
+    </div>
+
+    <div class="skill">
+      <div class="circle" data-percent="80">
+        <span>80%</span>
+      </div>
+      <h3>UI/UX</h3>
+    </div>
+
+    <div class="skill">
+      <div class="circle" data-percent="65">
+        <span>65%</span>
+      </div>
+      <h3>Node.js</h3>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+ <section class="portfolio-section">
+
+  <h1 class="background-title">WORK</h1>
+  <h2 class="main-title">MY <span>PORTFOLIO</span></h2>
+
+  <!-- Filter Buttons -->
+  <!-- <div class="portfolio-filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="web">Web</button>
+    <button data-filter="design">Design</button>
+    <button data-filter="app">App</button>
+  </div> -->
+
+  <!-- Projects Grid -->
+  <div class="portfolio-container">
+
+  <div class="portfolio-card web">
+    <img src="work-image1.png" alt="Project 1">
+    <div class="overlay">
+      <h3>Project One</h3>
     </div>
   </div>
 
+  <div class="portfolio-card design">
+    <img src="work-image2.png" alt="Project 2">
+    <div class="overlay">
+      <h3>Project Two</h3>
+    </div>
+  </div>
 
+  <div class="portfolio-card app">
+    <img src="work-image3.png" alt="Project 3">
+    <div class="overlay">
+      <h3>Project Three</h3>
+    </div>
+  </div>
 
+  <div class="portfolio-card web">
+    <img src="work-image1.png" alt="Project 4">
+    <div class="overlay">
+      <h3>Project Four</h3>
+    </div>
+  </div>
 
+  <div class="portfolio-card design">
+    <img src="work-image2.png" alt="Project 5">
+    <div class="overlay">
+      <h3>Project Five</h3>
+    </div>
+  </div>
 
+  <div class="portfolio-card app">
+    <img src="work-image3.png" alt="Project 6">
+    <div class="overlay">
+      <h3>Project Six</h3>
+    </div>
+  </div>
 
+</div>
 
+</section>
 
+<!-- EXPERIENCE -->
+<section class="experience-section">
 
+  <h1 class="background-title">EXPERIENCE</h1>
+  <h2 class="main-title">MY <span>JOURNEY</span></h2>
 
+  <div class="timeline">
 
+    <!-- Item 1 -->
+    <div class="timeline-item">
+      <div class="timeline-icon">🎓</div>
+      <div class="timeline-content">
+        <span class="date">2020 - 2024</span>
+        <h3>Bachelor in Computer Science</h3>
+        <h4>University Name</h4>
+        <p>
+          Learned software development, data structures, and web technologies.
+          Built multiple academic projects and improved problem-solving skills.
+        </p>
+      </div>
+    </div>
 
+    <!-- Item 2 -->
+    <div class="timeline-item">
+      <div class="timeline-icon">💼</div>
+      <div class="timeline-content">
+        <span class="date">2023 - Present</span>
+        <h3>Frontend Developer</h3>
+        <h4>Company Name</h4>
+        <p>
+          Developed responsive web applications using HTML, CSS, and JavaScript.
+          Improved UI performance and user experience across multiple projects.
+        </p>
+      </div>
+    </div>
 
+    <!-- Item 3 -->
+    <div class="timeline-item">
+      <div class="timeline-icon">💻</div>
+      <div class="timeline-content">
+        <span class="date">2022 - 2023</span>
+        <h3>Freelance Developer</h3>
+        <h4>Self-employed</h4>
+        <p>
+          Delivered custom websites for clients. Focused on modern design,
+          responsiveness, and performance optimization.
+        </p>
+      </div>
+    </div>
 
+    <!-- Item 4 -->
+    <div class="timeline-item">
+      <div class="timeline-icon">📘</div>
+      <div class="timeline-content">
+        <span class="date">2018 - 2020</span>
+        <h3>High School Diploma</h3>
+        <h4>School Name</h4>
+        <p>
+          Completed secondary education with focus on mathematics and science.
+          Developed strong analytical and technical foundation.
+        </p>
+      </div>
+    </div>
 
+  </div>
 
+</section>
 
+<!-- BLOG -->
+<section class="blog-section">
 
+  <h1 class="background-title">BLOG</h1>
+  <h2 class="main-title">MY <span>POSTS</span></h2>
 
+  <!-- Filters -->
+  <!-- <div class="blog-filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="web">Web</button>
+    <button data-filter="coding">Coding</button>
+    <button data-filter="design">Design</button>
+  </div> -->
 
+  <!-- Blog Cards -->
+  <div class="blog-container">
 
+    <div class="blog-card web" onclick="openPost(0)">
+      <img src="myWorkImg.png">
+      <div class="blog-content">
+        <span>Web</span>
+        <h3>How to Build a Portfolio</h3>
+        <p>Learn how to create a modern portfolio step by step.</p>
+      </div>
+    </div>
 
+    <div class="blog-card coding" onclick="openPost(1)">
+      <img src="myWorkImg.png">
+      <div class="blog-content">
+        <span>Coding</span>
+        <h3>JavaScript Tips</h3>
+        <p>Improve your JS skills with these useful tips.</p>
+      </div>
+    </div>
 
+    <div class="blog-card design" onclick="openPost(2)">
+      <img src="myWorkImg.png">
+      <div class="blog-content">
+        <span>Design</span>
+        <h3>UI/UX Basics</h3>
+        <p>Understand core principles of great design.</p>
+      </div>
+    </div>
 
+  </div>
 
+</section>
 
+<!-- BLOG MODAL -->
 
+<div class="blog-modal" id="blogModal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closePost()">×</span>
+    <div id="postContent"></div>
 
+    <!-- Comments -->
+    <div class="comments">
+      <h3>Comments</h3>
+      <textarea placeholder="Write a comment..."></textarea>
+      <button onclick="addComment()">Post</button>
+      <div id="commentList"></div>
+    </div>
 
+  </div>
+</div>
 
+<!-- TESTIMONIAL -->
+<section class="testimonial-section">
 
+  <h1 class="background-title">TESTIMONIALS</h1>
+  <h2 class="main-title">WHAT <span>PEOPLE SAY</span></h2>
 
+  <div class="testimonial-container">
 
+    <div class="testimonial active">
+      <img src="images/client1.jpg" alt="">
+      <p>
+        "Working with you was an amazing experience. The project was delivered
+        on time and exceeded expectations."
+      </p>
+      <h3>John Doe</h3>
+      <span>CEO, Company</span>
+    </div>
 
+    <div class="testimonial">
+      <img src="images/client2.jpg" alt="">
+      <p>
+        "Very professional and creative developer. Highly recommended for any
+        web development work."
+      </p>
+      <h3>Jane Smith</h3>
+      <span>UI/UX Designer</span>
+    </div>
 
+    <div class="testimonial">
+      <img src="images/client3.jpg" alt="">
+      <p>
+        "Great communication and excellent results. The website looks modern
+        and works perfectly."
+      </p>
+      <h3>Michael Lee</h3>
+      <span>Project Manager</span>
+    </div>
 
+  </div>
 
+  <!-- Controls -->
+  <!-- <div class="testimonial-controls">
+    <span onclick="prevTestimonial()">❮</span>
+    <span onclick="nextTestimonial()">❯</span>
+  </div> -->
 
+</section>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>CONTACT</h2>
 
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <textarea id="message" placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
 
+<footer>
+  © 2026 Gad Nishimwe
+</footer>
 
-
-
-
-
-
-
- <script src="index.js">
-    
-     
-     
-// function opentab(tabname) {
-//         var tablinks = document.querySelectorAll(".tab-links");
-//         var tabcontents = document.querySelectorAll(".tab-contents");
-
-//         // Remove 'active-link' class from all tab links
-//         tablinks.forEach(function(tablink) {
-//             tablink.classList.remove("active-link");
-//         });
-
-//         // Remove 'active-tab' class from all tab contents
-//         tabcontents.forEach(function(tabcontent) {
-//             tabcontent.classList.remove("active-tab");
-//         });
-
-//         // Add 'active-link' class to the clicked tab link
-//         document.querySelector(".tab-links." + tabname).classList.add("active-link");
-
-//         // Add 'active-tab' class to the corresponding tab content
-//         document.getElementById(tabname).classList.add("active-tab");
-//     }
- </script>
-  
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzS_bGCNPceJeAP6yBa9t0gtxJ7l6wtMuO2Rv5mJDDQQXDVFztLfPIt22XUSmq1_Knw/exec'
-    const form = document.forms['submit-to-google-sheet']
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'get', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
-               <!---------------------- greetings ------------------>
-               <script>
-    const now = new Date();
-    const hours = now.getHours();
-    let greeting;
-
-    if (hours < 12) {
-      greeting = "Good morning, thank you for viewing our portfolio.";
-    } else if (hours < 18) {
-      greeting = "Good afternoon, thank you for viewing our portfolio.";
-    } else {
-      greeting = "Good evening, thank you for viewing our portfolio.";
-    }
-
-    const container = document.getElementById("greeting-message");
-
-    // Split the greeting into words
-    const words = greeting.split(" ");
-
-    words.forEach((word, index) => {
-      const span = document.createElement("span");
-      span.textContent = word;
-
-      // Apply animation delay to each word
-      span.style.animationDelay = `${index * 0.5}s`; // Each word starts after the previous
-      container.appendChild(span);
-
-      // Add a space between words
-      if (index < words.length - 1) {
-        container.appendChild(document.createTextNode(" "));
-      }
-    });
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
