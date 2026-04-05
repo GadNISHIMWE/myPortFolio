@@ -30,7 +30,7 @@ html{
 }
 
 /* LIGHT MODE */
-.light-mode {
+/* .light-mode {
   background: #ffffff;
   color: #111;
 }
@@ -46,7 +46,7 @@ html{
 .light-mode .nav-btn {
   background: #ddd;
   color: black;
-}
+} */
   
 #header{
     width:100%;
