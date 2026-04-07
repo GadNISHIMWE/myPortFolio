@@ -7,9 +7,10 @@
 html{
     scroll-behavior:smooth;
 }
-.theme-toggle {
+
+ .theme-toggle {
   position: fixed;
-  left: 20px;
+  right: 20px;
   top: 20px;
   width: 50px;
   height: 50px;
@@ -25,12 +26,10 @@ html{
 }
 
 .theme-toggle:hover {
-  background: #7b0f55;
+  background: #e8d4e1;
   color: black;
-}
-
-/* LIGHT MODE */
-/* .light-mode {
+} 
+.light-mode {
   background: #ffffff;
   color: #111;
 }
@@ -46,8 +45,12 @@ html{
 .light-mode .nav-btn {
   background: #ddd;
   color: black;
-} */
-  
+}
+  body {
+  background: #111;
+  color: #fff;
+  transition: 0.3s;
+}
 #header{
     width:100%;
     height:100vh;
@@ -114,13 +117,9 @@ html{
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  background: #0b0b0b;
-  color: white;
-}
 .right-nav {
   position: fixed;
-  right: 20px;
+  left: 20px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -141,12 +140,20 @@ body {
   text-decoration: none;
   transition: 0.3s;
 }
+.nav-name {
+  display: none;
+}
 
 .nav-btn:hover,
-.nav-btn.active {
+.nav-btn.active{
   background: #facc15;
   color: black;
 }
+.nav-btn:hover,
+.nav-name{
+display: block;
+}
+
 section {
   min-height: 100vh; /* FULL SCREEN */
   display: flex;
@@ -168,12 +175,13 @@ section {
 .hero::before {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 35%;
   height: 100%;
   background: #facc15;
-  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+  /*  */
   z-index: -1;
 }
 
@@ -182,6 +190,7 @@ section {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  left: 40%;
 }
 
 /* IMAGE */
@@ -334,7 +343,7 @@ h2 {
 
 .background-title {
   position: absolute;
-  top: 20px;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 120px;
@@ -343,9 +352,18 @@ h2 {
 }
 
 .main-title {
+  top: 20px;
   text-align: center;
   font-size: 40px;
   margin-bottom: 50px;
+}
+.about-section .main-title {
+  position: absolute;
+  top: 40px; /* adjust spacing from top */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
 }
 
 .main-title span {
@@ -470,7 +488,14 @@ h2 {
   font-size: 120px;
   color: rgba(255,255,255,0.05);
 }
-
+.portfolio-section .main-title {
+  position: absolute;
+  top: 40px; /* adjust spacing from top */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
 .portfolio-filters {
   text-align: center;
   margin-bottom: 40px;
@@ -553,6 +578,14 @@ h2 {
   position: relative;
   padding: 80px 40px;
   text-align: center;
+}
+.skills-section .main-title {
+  position: absolute;
+  top: 40px; /* adjust spacing from top */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
 }
 
 .skills-container {
@@ -691,6 +724,15 @@ h2 {
   padding: 80px 40px;
 }
 
+.experience-section .main-title {
+  position: absolute;
+  top: 40px; /* adjust spacing from top */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
 /* TIMELINE */
 .timeline {
   position: relative;
@@ -777,6 +819,7 @@ h2 {
 .blog-section {
   position: relative;
   padding: 80px 40px;
+  margin-left: 50px;
 }
 
 /* FILTERS */
@@ -834,6 +877,15 @@ h2 {
 
 .blog-card:hover {
   transform: translateY(-5px);
+}
+
+.blog-section .main-title {
+  position: absolute;
+  top: 40px; /* adjust spacing from top */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
 }
 
 /* MODAL */
@@ -905,21 +957,46 @@ h2 {
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  position: relative;
 }
 .project-grid,
 .skills-grid {
   width: 100%;
 }
 
+.contact h2 {
+  position: absolute;
+  top: 40px; /* adjust spacing from top */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
 /* ------------------------------portfolio--------------------- */
 .port-Folio{
     padding: 50px 0;
 } 
+.portfolio-section{
+  position: relative;
+}
+.portfolio-section .main-title {
+  position: absolute;
+  top: 40px; /* adjust spacing from top */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+.portfolio-container{
+  margin-left: 50px;
+  margin-top: 50px;
+}
 .work-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-gap: 40px;
     margin-top: 50px;
+    /* margin-left: 100px; */
 }
 
 .work{
@@ -1002,11 +1079,21 @@ h2 {
   text-align: center;
 }
 
+.testimonial-section .main-title {
+  position: absolute;
+  top: 40px; /* adjust spacing from top */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
 /* CONTAINER */
 .testimonial-container {
   max-width: 700px;
   margin: auto;
   position: relative;
+  margin-left: 80px;
 }
 
 /* TESTIMONIAL CARD */

@@ -11,10 +11,29 @@ document.querySelectorAll("a").forEach(link => {
 });
 
 // DARK MODE
-document.getElementById("themeToggle").onclick = () => {
-  document.body.classList.toggle("light-mode");
-};
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("themeToggle");
 
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+  });
+});
+
+// change moon to sun
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("themeToggle");
+  const icon = toggle.querySelector("i");
+
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+      icon.classList.replace("fa-moon", "fa-sun");
+    } else {
+      icon.classList.replace("fa-sun", "fa-moon");
+    }
+  });
+});
 // FORM
 document.getElementById("contactForm").onsubmit = e => {
   e.preventDefault();
