@@ -330,6 +330,7 @@ h2 {
   display: flex;
   gap: 50px;
   justify-content: space-between;
+  margin-left: 80px;
 }
 
 .about-left,
@@ -722,6 +723,7 @@ h2 {
 .experience-section {
   position: relative;
   padding: 80px 40px;
+  margin-left: 80px;
 }
 
 .experience-section .main-title {
@@ -849,6 +851,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+  margin-left: 80px;
 }
 
 /* CARD */
@@ -988,7 +991,7 @@ h2 {
   width: 100%;
 }
 .portfolio-container{
-  margin-left: 50px;
+  margin-left: 80px;
   margin-top: 50px;
 }
 .work-list{
