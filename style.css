@@ -127,31 +127,66 @@ html{
   gap: 20px;
   z-index: 1000;
 }
+.right-nav h5{
+  display:none; 
+}
 
 .nav-btn {
   width: 50px;
   height: 50px;
   background: #2a2a2a;
   color: white;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  position: relative;
   justify-content: center;
   border-radius: 50%;
   text-decoration: none;
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 .nav-name {
   display: none;
 }
 
+.nav-btn {
+  width: 50px;
+  height: 50px;
+  background: #2a2a2a;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  overflow: visible;
+}
+
+.tooltip {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 10px);
+  visibility: hidden;
+  background: #111;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* Hover effect */
+.nav-btn:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
 .nav-btn:hover,
-.nav-btn.active{
+.nav-btn.active {
   background: #facc15;
   color: black;
-}
-.nav-btn:hover,
-.nav-name{
-display: block;
 }
 
 section {
@@ -456,6 +491,7 @@ h2 {
   gap: 15px;
 }
 
+
 .side-icons .icon {
   width: 50px;
   height: 50px;
@@ -469,9 +505,12 @@ h2 {
 }
 
 .side-icons .icon.active,
-.side-icons .icon:hover {
+.side-icons .icon:hover,
+.right-nav h5.active,
+ .right-nav h5:hover{
   background: #f7b500;
   color: #000;
+  display:block;
 }
 
 /* Projects */

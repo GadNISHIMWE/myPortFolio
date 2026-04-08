@@ -13,15 +13,6 @@ document.querySelectorAll("a").forEach(link => {
 // DARK MODE
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("themeToggle");
-
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-  });
-});
-
-// change moon to sun
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("themeToggle");
   const icon = toggle.querySelector("i");
 
   toggle.addEventListener("click", () => {
@@ -31,6 +22,29 @@ document.addEventListener("DOMContentLoaded", () => {
       icon.classList.replace("fa-moon", "fa-sun");
     } else {
       icon.classList.replace("fa-sun", "fa-moon");
+    }
+  });
+});
+
+// ACTIVE NAV BUTTON ON SCROLL
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("section");
+  const navButtons = document.querySelectorAll(".nav-btn");
+
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navButtons.forEach(btn => {
+    btn.classList.remove("active");
+    if (btn.getAttribute("href") === `#${current}`) {
+      btn.classList.add("active");
     }
   });
 });
