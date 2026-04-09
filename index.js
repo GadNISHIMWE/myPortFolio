@@ -49,10 +49,37 @@ window.addEventListener("scroll", () => {
   });
 });
 // FORM
-document.getElementById("contactForm").onsubmit = e => {
-  e.preventDefault();
-  alert("Message sent!");
-};
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+
+    fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json"
+      }
+    })
+      .then(response => {
+        if (response.ok) {
+          alert("Message sent!");
+          contactForm.reset();
+        } else {
+          return response.json().then(data => {
+            throw new Error(data.error || "Unable to send message.");
+          });
+        }
+      })
+      .catch(error => {
+        alert("Failed to send message. Please try again later.");
+        console.error(error);
+      });
+  });
+}
 
 // About
 // Simple interaction for side icons
