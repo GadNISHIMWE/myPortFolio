@@ -393,7 +393,7 @@ h2 {
   display: flex;
   gap: 50px;
   justify-content: space-between;
-  margin-left: 80px;
+  margin-left: 100px;
 }
 
 .about-left,
@@ -403,6 +403,7 @@ h2 {
 .about-section {
   position: relative;
   padding: 60px 40px;
+  margin-left: 100px;
 }
 
 .background-title {
@@ -546,6 +547,7 @@ h2 {
 .portfolio-section {
   position: relative;
   padding: 80px 40px;
+  margin-left: 100px;
 }
 
 .portfolio-section .background-title {
@@ -646,6 +648,7 @@ h2 {
   position: relative;
   padding: 80px 40px;
   text-align: center;
+  margin-left: 100px;
 }
 .skills-section .main-title {
   position: absolute;
@@ -790,7 +793,7 @@ h2 {
 .experience-section {
   position: relative;
   padding: 80px 40px;
-  margin-left: 80px;
+  margin-left: 100px;
 }
 
 .experience-section .main-title {
@@ -888,7 +891,7 @@ h2 {
 .blog-section {
   position: relative;
   padding: 80px 40px;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 
 /* FILTERS */
@@ -918,7 +921,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  margin-left: 80px;
+  margin-left: 100px;
 }
 
 /* CARD */
@@ -1058,7 +1061,7 @@ h2 {
   width: 100%;
 }
 .portfolio-container{
-  margin-left: 80px;
+  margin-left: 100px;
   margin-top: 50px;
 }
 .work-list{
@@ -1147,6 +1150,7 @@ h2 {
   position: relative;
   padding: 80px 40px;
   text-align: center;
+  margin-left: 100px;
 }
 
 .testimonial-section .main-title {
@@ -1163,7 +1167,7 @@ h2 {
   max-width: 700px;
   margin: auto;
   position: relative;
-  margin-left: 80px;
+  margin-left: 100px;
 }
 
 /* TESTIMONIAL CARD */
@@ -1365,9 +1369,14 @@ footer{
 /* TABLET DEVICES (768px to 1024px) */
 @media (max-width: 1024px) {
   section {
-    padding: 50px 5% !important;
+    padding: 50px 5% 50px 75px !important;
     min-height: auto !important;
     display: block !important;
+    margin-left: 0 !important;
+  }
+
+  .hero {
+    padding: 50px 5% 50px 75px !important;
   }
 
   .background-title {
@@ -1391,6 +1400,18 @@ footer{
     gap: 30px;
   }
 
+  .portfolio-section {
+    margin-left: 0 !important;
+  }
+
+  .skills-section {
+    margin-left: 0 !important;
+  }
+
+  .about-section {
+    margin-left: 0 !important;
+  }
+
   .experience-section {
     margin-left: 0 !important;
   }
@@ -1399,8 +1420,21 @@ footer{
     margin-left: 0 !important;
   }
 
+  .blog-section {
+    margin-left: 0 !important;
+  }
+
   .testimonial-container {
     margin-left: 0 !important;
+  }
+
+  .testimonial-section {
+    margin-left: 0 !important;
+  }
+
+  .portfolio-container {
+    margin-left: 0 !important;
+    margin-top: 30px;
   }
 
   .info-grid {
@@ -1444,6 +1478,7 @@ footer{
     padding: 30px 15px !important;
     min-height: auto !important;
     display: block !important;
+    margin-left: 0 !important;
   }
 
   body {
@@ -1481,8 +1516,9 @@ footer{
   /* Hero Section */
   .hero {
     height: auto;
-    padding: 30px 15px !important;
+    padding: 30px 15px 30px 70px !important;
     min-height: auto;
+    margin-left: 0 !important;
   }
 
   .hero::before {
@@ -1495,7 +1531,7 @@ footer{
     flex-direction: column;
     text-align: center;
     left: 0;
-  }
+    width: 100%;
 
   .hero-content {
     max-width: 100%;
@@ -1556,7 +1592,8 @@ footer{
 
   /* About Section */
   .about-section {
-    padding: 30px 15px !important;
+    padding: 30px 15px 30px 70px !important;
+    margin-left: 0 !important;
   }
 
   .container {
@@ -1603,7 +1640,8 @@ footer{
 
   /* Skills Section */
   .skills-section {
-    padding: 30px 15px !important;
+    padding: 30px 15px 30px 70px !important;
+    margin-left: 0 !important;
   }
 
   .skills-container {
@@ -1633,7 +1671,8 @@ footer{
 
   /* Portfolio Section */
   .portfolio-section {
-    padding: 30px 15px !important;
+    padding: 30px 15px 30px 70px !important;
+    margin-left: 0 !important;
   }
 
   .portfolio-container {
@@ -1656,7 +1695,7 @@ footer{
 
   /* Experience Section */
   .experience-section {
-    padding: 30px 15px !important;
+    padding: 30px 15px 30px 70px !important;
     margin-left: 0 !important;
   }
 
@@ -1701,7 +1740,7 @@ footer{
 
   /* Blog Section */
   .blog-section {
-    padding: 30px 15px !important;
+    padding: 30px 15px 30px 70px !important;
     margin-left: 0 !important;
   }
 
@@ -1791,9 +1830,10 @@ footer{
 @media (max-width: 480px) {
   /* General */
   section {
-    padding: 30px 15px !important;
+    padding: 30px 15px 30px 60px !important;
     min-height: auto !important;
     display: block !important;
+    margin-left: 0 !important;
   }
 
   body {
@@ -1831,7 +1871,7 @@ footer{
 
   /* Hero */
   .hero {
-    padding: 30px 15px;
+    padding: 30px 15px 30px 60px !important;
     min-height: auto;
   }
 
