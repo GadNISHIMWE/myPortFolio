@@ -1297,7 +1297,16 @@ form button {
 form button:hover {
     background: transparent;
     color: #f7b500;
-}.copyright p{
+}
+
+#formStatus {
+  margin-top: 12px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.form-success { color: #4caf50; }
+.form-error   { color: #f44336; }.copyright p{
     width: 100%;
     text-align: center; 
     padding:25px 0;

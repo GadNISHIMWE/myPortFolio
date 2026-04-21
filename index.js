@@ -55,28 +55,36 @@ if (contactForm) {
   contactForm.addEventListener("submit", e => {
     e.preventDefault();
 
-    const formData = new FormData(contactForm);
+    const btn = document.getElementById("submitBtn");
+    const status = document.getElementById("formStatus");
+
+    btn.disabled = true;
+    btn.textContent = "Sending...";
+    status.textContent = "";
+    status.className = "";
 
     fetch(contactForm.action, {
       method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json"
-      }
+      body: new FormData(contactForm),
+      headers: { Accept: "application/json" }
     })
-      .then(response => {
-        if (response.ok) {
-          alert("Message sent!");
+      .then(res => {
+        if (res.ok) {
+          status.textContent = "✅ Message sent! I'll get back to you soon.";
+          status.className = "form-success";
           contactForm.reset();
         } else {
-          return response.json().then(data => {
-            throw new Error(data.error || "Unable to send message.");
-          });
+          status.textContent = "❌ Something went wrong. Please try again.";
+          status.className = "form-error";
         }
       })
-      .catch(error => {
-        alert("Failed to send message. Please try again later.");
-        console.error(error);
+      .catch(() => {
+        status.textContent = "❌ Network error. Check your connection.";
+        status.className = "form-error";
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btn.textContent = "Send Message";
       });
   });
 }

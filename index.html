@@ -432,10 +432,11 @@
   <h2>CONTACT</h2>
 
   <form id="contactForm" action="https://formspree.io/f/mlgovzdw" method="POST">
-    <input type="text" id="name" placeholder="Name" name="name">
-    <input type="email" id="email" placeholder="Email" name="email">
-    <textarea id="message" placeholder="Message" name="message"></textarea>
-    <button type="submit">Send</button>
+    <input type="text" id="name" placeholder="Your Name" name="name" required>
+    <input type="email" id="email" placeholder="Your Email" name="email" required>
+    <textarea id="message" placeholder="Your Message" name="message" rows="5" required></textarea>
+    <button type="submit" id="submitBtn">Send Message</button>
+    <p id="formStatus"></p>
   </form>
 </section>
 
